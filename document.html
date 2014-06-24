@@ -1,0 +1,85 @@
+<?header("content-Type: text/html; charset=utf-8"); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://blog.csdn.net/electroniXtar/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Document</title>
+
+<style type="text/css">
+body
+{
+	font-size: 14px;
+}
+
+*{
+margin: 0;
+padding: 0;
+}
+
+.center
+{
+margin:auto;
+width:900px;
+}
+
+.tab
+{
+	list-style: none;
+	float: left;
+	padding: 9px 0px 6px 0px;
+	width: 149px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+a{text-decoration: none; color: #4169E1;}
+a:hover{text-decoration: underline; color: #cc0000;}
+
+</style>
+
+</head>
+
+<body>
+<div width="900" class="center">
+<div align="center" style="margin:0px;padding: 0px 0px 0px 0px;width: 900px;background-color:#dee7f5;"> 
+    <li class="tab" style="border-right: solid 1px #9cd9f5;background-color: #dee7f5;"><a href="index.html">Home</a></li>
+	<li class="tab" style="border-right: solid 1px #9cd9f5;background-color: #dee7f5;"><a href="example.html">Example</a></li>
+	<li class="tab" style="border-right: solid 1px #9cd9f5;background-color: #dee7f5;"><a href="https://sourceforge.net/projects/nut3d/files/?source=navbar" target="_blank">Download</a></li>
+	<li class="tab" style="border-right: solid 1px #9cd9f5;background-color: #F8F8F8;"><a href="document.html">Document</a></li>
+	<li class="tab" style="border-right: solid 1px #9cd9f5;background-color: #dee7f5;"><a href="contact.html">Contact</a></li>
+	<li class="tab" style="background-color: #dee7f5;"><a href="https://sourceforge.net/p/nut3d/discussion/?source=navbar" target="_blank">Forum</a></li>
+</div>
+<div style="line-height:30px;text-align: left;">
+<p>目前引擎和编辑器还有很多功能没有完成，希望有能力的程序先自己进行二次开发，现在简单介绍一下引擎使用步骤：</p>
+
+<h4>工程构建步骤</h4>
+<ol>
+<li>下载引擎的三个压缩文件nut3d_0.9.5.7z，nuteditor_0.9.5.7z，nutexample_0.9.5.7z。</li>
+<li>nut3d_0.9.5.7z是引擎的核心库，请编译成swc文件。</li>
+<li>nuteditor_0.9.5.7z是引擎的编辑器，请导入为Air工程，并引用nut3d.swc库。</li>
+<li>nutexample_0.9.5.7z是例子，以web工程导入，并引用nut3d.swc库。</li>
+</ol>
+
+<h4>模型编辑器使用</h4>
+<ol>
+<li>从3dmax或maya导出dae格式文件，请选中三角化选项和相对路径。</li>
+<li>打开模型编辑器，先设置工作目录。</li>
+<li>导入DAE文件，如果贴图不正确，就选中材质，然后点击“diffuseMap”属性，选择贴图。编辑好材质后，模型文件保存为.mdl，动画文件保存为.skt。</li>
+</ol>
+
+
+<h4>关于工作目录</h4>
+<p>在引擎初始化时调用Nut.initialize("../assets/")设置工作目录。资源在工作目录下都是分类保存的。请参考例子中的资源组织方式，建立以下子目录：Texture(图片)，model(模型)，effect（特效），scene（场景），skeleton（骨骼动画）。nut.core.ResourceManager类负责管理资源和路径。如果需要其他资源种类，您可以自己组织，也可以通过修改nut.core.ResourceManager类来添加。</p>
+</div>
+<div id="footer" align="center" style="width:850px;">
+  <iframe scrolling="no" align="center" frameborder="0" src="foot.htm" width="100%"></iframe>
+</div>
+</div>
+<noscript>
+</body>
+</noscript>
+
+</html>
